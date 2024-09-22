@@ -1,0 +1,165 @@
+with Ada.Wide_Wide_Text_IO; use Ada.Wide_Wide_Text_IO;
+
+with FehlermeldungSchreiben;
+
+package body Meldungssystem is
+
+   procedure Logik
+     (FehlermeldungExtern : in Wide_Wide_String;
+      KonsolenmeldungExtern : in Boolean;
+      ProgrammstoppExtern : in Boolean)
+   is begin
+      
+      FehlermeldungSchreiben.MeldungSchreiben (MeldungExtern => Logikfehler & FehlermeldungExtern);
+      
+      case
+        KonsolenmeldungExtern
+      is
+         when True =>
+            Put_Line (Item => Logikfehler & FehlermeldungExtern);
+            
+         when False =>
+            null;
+      end case;
+      
+      case
+        ProgrammstoppExtern
+      is
+         when True =>
+            raise LogikStopp;
+            
+         when False =>
+            null;
+      end case;
+      
+   end Logik;
+   
+   
+   
+   procedure Grafik
+     (FehlermeldungExtern : in Wide_Wide_String;
+      KonsolenmeldungExtern : in Boolean;
+      ProgrammstoppExtern : in Boolean)
+   is begin
+         
+      FehlermeldungSchreiben.MeldungSchreiben (MeldungExtern => Grafikfehler & FehlermeldungExtern);
+      
+      case
+        KonsolenmeldungExtern
+      is
+         when True =>
+            Put_Line (Item => Grafikfehler & FehlermeldungExtern);
+            
+         when False =>
+            null;
+      end case;
+      
+      case
+        ProgrammstoppExtern
+      is
+         when True =>
+            raise GrafikStopp;
+            
+         when False =>
+            null;
+      end case;
+      
+   end Grafik;
+   
+   
+   
+   procedure Musik
+     (FehlermeldungExtern : in Wide_Wide_String;
+      KonsolenmeldungExtern : in Boolean;
+      ProgrammstoppExtern : in Boolean)
+   is begin
+      
+      FehlermeldungSchreiben.MeldungSchreiben (MeldungExtern => Musikfehler & FehlermeldungExtern);
+      
+      case
+        KonsolenmeldungExtern
+      is
+         when True =>
+            Put_Line (Item => Musikfehler & FehlermeldungExtern);
+            
+         when False =>
+            null;
+      end case;
+      
+      case
+        ProgrammstoppExtern
+      is
+         when True =>
+            raise MusikStopp;
+            
+         when False =>
+            null;
+      end case;
+      
+   end Musik;
+   
+   
+   
+   procedure Sound
+     (FehlermeldungExtern : in Wide_Wide_String;
+      KonsolenmeldungExtern : in Boolean;
+      ProgrammstoppExtern : in Boolean)
+   is begin
+      
+      FehlermeldungSchreiben.MeldungSchreiben (MeldungExtern => Soundfehler & FehlermeldungExtern);
+      
+      case
+        KonsolenmeldungExtern
+      is
+         when True =>
+            Put_Line (Item => Soundfehler & FehlermeldungExtern);
+            
+         when False =>
+            null;
+      end case;
+      
+      case
+        ProgrammstoppExtern
+      is
+         when True =>
+            raise SoundStopp;
+            
+         when False =>
+            null;
+      end case;
+      
+   end Sound;
+   
+   
+   
+   procedure Mehrfachverwendung
+     (FehlermeldungExtern : in Wide_Wide_String;
+      KonsolenmeldungExtern : in Boolean;
+      ProgrammstoppExtern : in Boolean)
+   is begin
+      
+      FehlermeldungSchreiben.MeldungSchreiben (MeldungExtern => Mehrfachfehler & FehlermeldungExtern);
+      
+      case
+        KonsolenmeldungExtern
+      is
+         when True =>
+            Put_Line (Item => Mehrfachfehler & FehlermeldungExtern);
+            
+         when False =>
+            null;
+      end case;
+      
+      case
+        ProgrammstoppExtern
+      is
+         when True =>
+            raise MehrfachverwendungStopp;
+            
+         when False =>
+            null;
+      end case;
+      
+   end Mehrfachverwendung;
+
+end Meldungssystem;
