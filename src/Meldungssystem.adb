@@ -5,17 +5,17 @@ with MeldungSchreiben;
 package body Meldungssystem is
 
    procedure Logik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
    is begin
       
-      MeldungSchreiben.MeldungSchreiben (MeldungExtern => Logikfehler & FehlermeldungExtern);
+      MeldungSchreiben.Meldung (MeldungExtern => Logikfehler & MeldungExtern);
       
       case
         FehlerWarnungExtern
       is
          when True =>
-            Put_Line (Item => Logikfehler & FehlermeldungExtern);
+            Put_Line (Item => Logikfehler & MeldungExtern);
             raise LogikStopp;
             
          when False =>
@@ -27,17 +27,17 @@ package body Meldungssystem is
    
    
    procedure Grafik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
    is begin
          
-      MeldungSchreiben.MeldungSchreiben (MeldungExtern => Grafikfehler & FehlermeldungExtern);
+      MeldungSchreiben.Meldung (MeldungExtern => Grafikfehler & MeldungExtern);
       
       case
         FehlerWarnungExtern
       is
          when True =>
-            Put_Line (Item => Grafikfehler & FehlermeldungExtern);
+            Put_Line (Item => Grafikfehler & MeldungExtern);
             raise GrafikStopp;
             
          when False =>
@@ -49,17 +49,17 @@ package body Meldungssystem is
    
    
    procedure Musik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
    is begin
       
-      MeldungSchreiben.MeldungSchreiben (MeldungExtern => Musikfehler & FehlermeldungExtern);
+      MeldungSchreiben.Meldung (MeldungExtern => Musikfehler & MeldungExtern);
       
       case
         FehlerWarnungExtern
       is
          when True =>
-            Put_Line (Item => Musikfehler & FehlermeldungExtern);
+            Put_Line (Item => Musikfehler & MeldungExtern);
             raise MusikStopp;
             
          when False =>
@@ -71,17 +71,17 @@ package body Meldungssystem is
    
    
    procedure Sound
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
    is begin
       
-      MeldungSchreiben.MeldungSchreiben (MeldungExtern => Soundfehler & FehlermeldungExtern);
+      MeldungSchreiben.Meldung (MeldungExtern => Soundfehler & MeldungExtern);
       
       case
         FehlerWarnungExtern
       is
          when True =>
-            Put_Line (Item => Soundfehler & FehlermeldungExtern);
+            Put_Line (Item => Soundfehler & MeldungExtern);
             raise SoundStopp;
             
          when False =>
@@ -93,17 +93,17 @@ package body Meldungssystem is
    
    
    procedure Sonstiges
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
    is begin
       
-      MeldungSchreiben.MeldungSchreiben (MeldungExtern => SonstigeFehler & FehlermeldungExtern);
+      MeldungSchreiben.Meldung (MeldungExtern => SonstigeFehler & MeldungExtern);
       
       case
         FehlerWarnungExtern
       is
          when True =>
-            Put_Line (Item => SonstigeFehler & FehlermeldungExtern);
+            Put_Line (Item => SonstigeFehler & MeldungExtern);
             raise SonstigesStopp;
             
          when False =>

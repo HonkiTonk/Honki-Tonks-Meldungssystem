@@ -3,14 +3,14 @@ private with Ada.Wide_Wide_Text_IO;
 package MeldungSchreiben is
    pragma Elaborate_Body;
 
-   procedure MeldungSchreiben
+   procedure Meldung
      (MeldungExtern : in Wide_Wide_String)
      with
        Pre => (
                  MeldungExtern'Length > 0
               );
    
-   procedure MeldungSchreibenASCII
+   procedure MeldungASCII
      (MeldungExtern : in String)
      with
        Pre => (

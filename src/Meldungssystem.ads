@@ -2,43 +2,43 @@ package Meldungssystem is
    pragma Elaborate_Body;
    
    procedure Logik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
      with
        Pre => (
-                 FehlermeldungExtern'Length > 0
+                 MeldungExtern'Length > 0
               );
             
    procedure Grafik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
      with
        Pre => (
-                 FehlermeldungExtern'Length > 0
+                 MeldungExtern'Length > 0
               );
    
    procedure Musik
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
      with
        Pre => (
-                 FehlermeldungExtern'Length > 0
+                 MeldungExtern'Length > 0
               );
    
    procedure Sound
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
      with
        Pre => (
-                 FehlermeldungExtern'Length > 0
+                 MeldungExtern'Length > 0
               );
    
    procedure Sonstiges
-     (FehlermeldungExtern : in Wide_Wide_String;
+     (MeldungExtern : in Wide_Wide_String;
       FehlerWarnungExtern : in Boolean)
      with
        Pre => (
-                 FehlermeldungExtern'Length > 0
+                 MeldungExtern'Length > 0
               );
    
 private

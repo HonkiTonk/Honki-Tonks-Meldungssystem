@@ -6,7 +6,7 @@ with Ada.Strings.UTF_Encoding.Wide_Wide_Strings; use Ada.Strings.UTF_Encoding.Wi
 
 package body MeldungSchreiben is
 
-   procedure MeldungSchreiben
+   procedure Meldung
      (MeldungExtern : in Wide_Wide_String)
    is begin
       
@@ -42,7 +42,7 @@ package body MeldungSchreiben is
       
    exception
      when StandardAdaFehler : others =>
-       Put (Item => "FehlermeldungSchreiben.MeldungSchreiben - Konnte nicht geschrieben werden" & Decode (Item => Exception_Information (X => StandardAdaFehler)));
+       Put (Item => "MeldungSchreiben.Meldung - Konnte nicht geschrieben werden" & Decode (Item => Exception_Information (X => StandardAdaFehler)));
          
          case
            Is_Open (File => DateiMeldung)
@@ -54,16 +54,16 @@ package body MeldungSchreiben is
                null;
          end case;
          
-   end MeldungSchreiben;
+   end Meldung;
    
    
    
-   procedure MeldungSchreibenASCII
+   procedure MeldungASCII
      (MeldungExtern : in String)
    is begin
 
-      MeldungSchreiben (MeldungExtern => Decode (Item => MeldungExtern));
+      Meldung (MeldungExtern => Decode (Item => MeldungExtern));
       
-   end MeldungSchreibenASCII;
+   end MeldungASCII;
 
 end MeldungSchreiben;
