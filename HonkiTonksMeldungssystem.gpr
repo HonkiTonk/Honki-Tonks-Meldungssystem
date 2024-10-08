@@ -3,9 +3,9 @@ library project HonkiTonksMeldungssystem is
    for Languages use ("Ada");
    for Library_Name use "HonkiTonksMeldungssystem";
    for Create_Missing_Dirs use "True";
-   for Source_Dirs use ("src/**");
-   for Object_Dir use "obj";
-   for Library_Dir use "lib";
+   for Source_Dirs use ("HonkiTonksMeldungssystem/src/**");
+   for Object_Dir use "HonkiTonksMeldungssystem/obj";
+   for Library_Dir use "HonkiTonksMeldungssystem/lib";
    for Library_Kind use "static";
 
    package Naming is
