@@ -1,4 +1,4 @@
-package Messagesystem is
+package HTMMessagesystem is
    pragma Elaborate_Body;
    
    procedure Logic
@@ -55,4 +55,4 @@ private
    SoundStop : exception;
    MiscellaneousStop : exception;
 
-end Messagesystem;
+end HTMMessagesystem;

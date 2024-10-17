@@ -1,15 +1,15 @@
 with Ada.Wide_Wide_Text_IO; use Ada.Wide_Wide_Text_IO;
 
-with WriteMessage;
+with HTMWriteMessage;
 
-package body Messagesystem is
+package body HTMMessagesystem is
 
    procedure Logic
      (MessageExternal : in Wide_Wide_String;
       ErrorWarningExternal : in Boolean)
    is begin
       
-      WriteMessage.Message (MessageExternal => LogicError & MessageExternal);
+      HTMWriteMessage.Message (MessageExternal => LogicError & MessageExternal);
       
       case
         ErrorWarningExternal
@@ -31,7 +31,7 @@ package body Messagesystem is
       ErrorWarningExternal : in Boolean)
    is begin
          
-      WriteMessage.Message (MessageExternal => GraphicError & MessageExternal);
+      HTMWriteMessage.Message (MessageExternal => GraphicError & MessageExternal);
       
       case
         ErrorWarningExternal
@@ -53,7 +53,7 @@ package body Messagesystem is
       ErrorWarningExternal : in Boolean)
    is begin
       
-      WriteMessage.Message (MessageExternal => MusicError & MessageExternal);
+      HTMWriteMessage.Message (MessageExternal => MusicError & MessageExternal);
       
       case
         ErrorWarningExternal
@@ -75,7 +75,7 @@ package body Messagesystem is
       ErrorWarningExternal : in Boolean)
    is begin
       
-      WriteMessage.Message (MessageExternal => SoundError & MessageExternal);
+      HTMWriteMessage.Message (MessageExternal => SoundError & MessageExternal);
       
       case
         ErrorWarningExternal
@@ -97,7 +97,7 @@ package body Messagesystem is
       ErrorWarningExternal : in Boolean)
    is begin
       
-      WriteMessage.Message (MessageExternal => MiscellaneousError & MessageExternal);
+      HTMWriteMessage.Message (MessageExternal => MiscellaneousError & MessageExternal);
       
       case
         ErrorWarningExternal
@@ -112,4 +112,4 @@ package body Messagesystem is
       
    end Miscellaneous;
 
-end Messagesystem;
+end HTMMessagesystem;

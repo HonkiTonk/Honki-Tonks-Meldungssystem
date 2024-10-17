@@ -1,4 +1,10 @@
-package Changelog is
+package HTMChangelog is
+   
+   -- Version 1.03.0000 => 1.03.1000 (18.10.2024):
+   
+   -- Naming revised so that the source files have a more unique name.
+   
+   
    
    -- Version 1.00.0000 -> 1.03.0000 (08.10.2024):
    
@@ -12,4 +18,4 @@ package Changelog is
    
    -- First Release.
 
-end Changelog;
+end HTMChangelog;

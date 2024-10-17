@@ -4,7 +4,7 @@ with Ada.Calendar; use Ada.Calendar;
 with Ada.Calendar.Formatting; use Ada.Calendar.Formatting;
 with Ada.Strings.UTF_Encoding.Wide_Wide_Strings; use Ada.Strings.UTF_Encoding.Wide_Wide_Strings;
 
-package body WriteMessage is
+package body HTMWriteMessage is
 
    procedure Message
      (MessageExternal : in Wide_Wide_String)
@@ -66,4 +66,4 @@ package body WriteMessage is
       
    end MessageASCII;
 
-end WriteMessage;
+end HTMWriteMessage;

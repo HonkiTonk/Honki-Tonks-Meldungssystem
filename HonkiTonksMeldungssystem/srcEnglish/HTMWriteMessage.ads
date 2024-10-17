@@ -1,6 +1,6 @@
 private with Ada.Wide_Wide_Text_IO;
 
-package WriteMessage is
+package HTMWriteMessage is
    pragma Elaborate_Body;
 
    procedure Message
@@ -27,4 +27,4 @@ private
       
    FileMessage : File_Type;
 
-end WriteMessage;
+end HTMWriteMessage;
