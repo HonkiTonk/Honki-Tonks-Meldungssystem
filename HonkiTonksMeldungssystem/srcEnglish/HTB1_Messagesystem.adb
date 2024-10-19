@@ -1,18 +1,18 @@
 with Ada.Wide_Wide_Text_IO; use Ada.Wide_Wide_Text_IO;
 
 with HTB1_WriteMessage;
+with HTB1_MessageVariables;
 
 package body HTB1_Messagesystem is
 
    procedure Logic
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
    is begin
       
       HTB1_WriteMessage.Message (MessageExternal => LogicError & MessageExternal);
       
       case
-        ErrorWarningExternal
+        HTB1_MessageVariables.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => LogicError & MessageExternal);
@@ -27,14 +27,13 @@ package body HTB1_Messagesystem is
    
    
    procedure Graphic
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
    is begin
          
       HTB1_WriteMessage.Message (MessageExternal => GraphicError & MessageExternal);
       
       case
-        ErrorWarningExternal
+        HTB1_MessageVariables.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => GraphicError & MessageExternal);
@@ -49,14 +48,13 @@ package body HTB1_Messagesystem is
    
    
    procedure Music
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
    is begin
       
       HTB1_WriteMessage.Message (MessageExternal => MusicError & MessageExternal);
       
       case
-        ErrorWarningExternal
+        HTB1_MessageVariables.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => MusicError & MessageExternal);
@@ -71,14 +69,13 @@ package body HTB1_Messagesystem is
    
    
    procedure Sound
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
    is begin
       
       HTB1_WriteMessage.Message (MessageExternal => SoundError & MessageExternal);
       
       case
-        ErrorWarningExternal
+        HTB1_MessageVariables.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => SoundError & MessageExternal);
@@ -93,14 +90,13 @@ package body HTB1_Messagesystem is
    
    
    procedure Miscellaneous
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
    is begin
       
       HTB1_WriteMessage.Message (MessageExternal => MiscellaneousError & MessageExternal);
       
       case
-        ErrorWarningExternal
+        HTB1_MessageVariables.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => MiscellaneousError & MessageExternal);

@@ -1,5 +1,12 @@
 package HTB1_Changelog is
    
+   -- Version 1.03.2000 => 1.04.3000 (18.10.2024):
+   
+   -- gpr files adjusted because there were problems with some settings when using the library in a project.
+   -- Instead of passing the decision between error and warning each time, they are now stored in a library-internal variable.
+   
+   
+   
    -- Version 1.03.1000 => 1.03.2000 (18.10.2024):
    
    -- Naming revised again so that the source files of my libraries have a unique name.

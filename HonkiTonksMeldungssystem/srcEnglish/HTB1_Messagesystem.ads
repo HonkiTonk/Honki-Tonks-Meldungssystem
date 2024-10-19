@@ -2,40 +2,35 @@ package HTB1_Messagesystem is
    pragma Elaborate_Body;
    
    procedure Logic
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
      with
        Pre => (
                  MessageExternal'Length > 0
               );
             
    procedure Graphic
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
      with
        Pre => (
                  MessageExternal'Length > 0
               );
    
    procedure Music
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
      with
        Pre => (
                  MessageExternal'Length > 0
               );
    
    procedure Sound
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
      with
        Pre => (
                  MessageExternal'Length > 0
               );
    
    procedure Miscellaneous
-     (MessageExternal : in Wide_Wide_String;
-      ErrorWarningExternal : in Boolean)
+     (MessageExternal : in Wide_Wide_String)
      with
        Pre => (
                  MessageExternal'Length > 0
