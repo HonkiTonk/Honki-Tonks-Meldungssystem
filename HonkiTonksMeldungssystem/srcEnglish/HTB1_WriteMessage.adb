@@ -1,19 +1,25 @@
-with Ada.Directories; use Ada.Directories;
-with Ada.Exceptions; use Ada.Exceptions;
-with Ada.Calendar; use Ada.Calendar;
-with Ada.Calendar.Formatting; use Ada.Calendar.Formatting;
 with Ada.Strings.UTF_Encoding.Wide_Wide_Strings; use Ada.Strings.UTF_Encoding.Wide_Wide_Strings;
+
+with Ada.Directories;
+with Ada.Exceptions;
+with Ada.Calendar;
+with Ada.Calendar.Formatting;
 
 package body HTB1_WriteMessage is
 
    procedure Message
      (MessageExternal : in Wide_Wide_String)
-   is begin
+   is
+      use Ada.Directories;
+      use Ada.Exceptions;
+      use Ada.Calendar;
+      use Ada.Calendar.Formatting;
+   begin
       
       WaitingLoop:
       while Is_Open (File => FileMessage) loop
          
-         delay WaitingTime;
+         delay until Clock + WaitingTime;
          
       end loop WaitingLoop;
       

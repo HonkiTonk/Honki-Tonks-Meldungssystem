@@ -20,6 +20,8 @@ package HTB1_WriteMessage is
 private
    use Ada.Wide_Wide_Text_IO;
    
+   -- Make these things customizable? äöü
+   -- But then i also have to check whether this is valid information, maybe add it later. äöü
    Messages : constant String (1 .. 8) := "Messages";
    FileForm : constant String (1 .. 6) := "WCEM=8";
    

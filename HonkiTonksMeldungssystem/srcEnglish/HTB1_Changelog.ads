@@ -1,6 +1,13 @@
 package HTB1_Changelog is
+   pragma Pure;
    
-   -- Version 1.03.2000 => 1.04.3000 (18.10.2024):
+   -- Version 1.03.3000 => 1.04.4000 (19.10.2024):
+   
+   -- Pragma file adjusted.
+   
+   
+   
+   -- Version 1.03.2000 => 1.04.3000 (19.10.2024):
    
    -- gpr files adjusted because there were problems with some settings when using the library in a project.
    -- Instead of passing the decision between error and warning each time, they are now stored in a library-internal variable.
