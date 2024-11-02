@@ -1,18 +1,18 @@
 with Ada.Wide_Wide_Text_IO; use Ada.Wide_Wide_Text_IO;
 
-with HTB1_WriteMessage;
-with HTB1_MessageVariables;
+with WriteMessageHTB1;
+with MessageVariablesHTB1;
 
-package body HTB1_Messagesystem is
+package body MessagesystemHTB1 is
 
    procedure Logic
      (MessageExternal : in Wide_Wide_String)
    is begin
       
-      HTB1_WriteMessage.Message (MessageExternal => LogicError & MessageExternal);
+      WriteMessageHTB1.Message (MessageExternal => LogicError & MessageExternal);
       
       case
-        HTB1_MessageVariables.ErrorMessageRequest
+        MessageVariablesHTB1.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => LogicError & MessageExternal);
@@ -30,10 +30,10 @@ package body HTB1_Messagesystem is
      (MessageExternal : in Wide_Wide_String)
    is begin
          
-      HTB1_WriteMessage.Message (MessageExternal => GraphicError & MessageExternal);
+      WriteMessageHTB1.Message (MessageExternal => GraphicError & MessageExternal);
       
       case
-        HTB1_MessageVariables.ErrorMessageRequest
+        MessageVariablesHTB1.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => GraphicError & MessageExternal);
@@ -51,10 +51,10 @@ package body HTB1_Messagesystem is
      (MessageExternal : in Wide_Wide_String)
    is begin
       
-      HTB1_WriteMessage.Message (MessageExternal => MusicError & MessageExternal);
+      WriteMessageHTB1.Message (MessageExternal => MusicError & MessageExternal);
       
       case
-        HTB1_MessageVariables.ErrorMessageRequest
+        MessageVariablesHTB1.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => MusicError & MessageExternal);
@@ -72,10 +72,10 @@ package body HTB1_Messagesystem is
      (MessageExternal : in Wide_Wide_String)
    is begin
       
-      HTB1_WriteMessage.Message (MessageExternal => SoundError & MessageExternal);
+      WriteMessageHTB1.Message (MessageExternal => SoundError & MessageExternal);
       
       case
-        HTB1_MessageVariables.ErrorMessageRequest
+        MessageVariablesHTB1.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => SoundError & MessageExternal);
@@ -93,10 +93,10 @@ package body HTB1_Messagesystem is
      (MessageExternal : in Wide_Wide_String)
    is begin
       
-      HTB1_WriteMessage.Message (MessageExternal => MiscellaneousError & MessageExternal);
+      WriteMessageHTB1.Message (MessageExternal => MiscellaneousError & MessageExternal);
       
       case
-        HTB1_MessageVariables.ErrorMessageRequest
+        MessageVariablesHTB1.ErrorMessageRequest
       is
          when True =>
             Put_Line (Item => MiscellaneousError & MessageExternal);
@@ -108,4 +108,4 @@ package body HTB1_Messagesystem is
       
    end Miscellaneous;
 
-end HTB1_Messagesystem;
+end MessagesystemHTB1;

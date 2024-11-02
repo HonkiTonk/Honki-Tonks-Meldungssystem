@@ -1,4 +1,4 @@
-package body HTB1_MessageVariables is
+package body MessageVariablesHTB1 is
 
    procedure ErrorMessageChange
      (ErrorWarningExternal : in Boolean)
@@ -18,4 +18,4 @@ package body HTB1_MessageVariables is
       
    end ErrorMessageRequest;
 
-end HTB1_MessageVariables;
+end MessageVariablesHTB1;

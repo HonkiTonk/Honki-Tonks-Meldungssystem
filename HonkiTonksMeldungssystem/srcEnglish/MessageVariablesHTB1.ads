@@ -1,4 +1,4 @@
-package HTB1_MessageVariables is
+package MessageVariablesHTB1 is
    pragma Preelaborate;
 
    procedure ErrorMessageChange
@@ -15,4 +15,4 @@ private
    
    ErrorWarning : Boolean := True;
 
-end HTB1_MessageVariables;
+end MessageVariablesHTB1;
